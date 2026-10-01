@@ -1,0 +1,334 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700&family=Poppins:wght@400;500;600&display=swap");
+
+:root {
+  --ink: #2b3a42;
+  --latar: #eef8fc;
+  --permukaan: #fffdf8;
+  --garis: #bfe6f3;
+  --garis-tegas: #6fc0db;
+  --redam: #5c7a89;
+  --taro: #4aa9c9;
+  --taro-tua: #2c6f8a;
+  --pisang: #a8dced;
+  --sukses: #2f6b3f;
+  --sukses-latar: #e3f1e5;
+  --galat: #9a2b2b;
+  --galat-latar: #fbeaea;
+  --font-judul: "Baloo 2", "Trebuchet MS", system-ui, sans-serif;
+  --font-isi: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--latar);
+  color: var(--ink);
+  font-family: var(--font-isi);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.halaman {
+  max-width: 38rem;
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 4rem;
+}
+
+.atas {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.atas a {
+  color: var(--redam);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.atas a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.pesan {
+  margin: 0 0 1.5rem;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.pesan-ok {
+  background: var(--sukses-latar);
+  color: var(--sukses);
+}
+
+.pesan-error {
+  background: var(--galat-latar);
+  color: var(--galat);
+}
+
+.pesan-error ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.identitas {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.segel {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 50%;
+  background: var(--taro);
+  color: var(--pisang);
+  font-family: var(--font-judul);
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.nama-blok {
+  flex: 1 1 12rem;
+  min-width: 0;
+}
+
+.nama-blok h1 {
+  margin: 0;
+  font-family: var(--font-judul);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  overflow-wrap: anywhere;
+}
+
+.sub {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.25rem 0 0;
+  color: var(--redam);
+}
+
+.peran {
+  padding: 0.0625rem 0.625rem;
+  border-radius: 999px;
+  background: var(--pisang);
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.label-kirim {
+  margin-bottom: 2.5rem;
+  overflow: hidden;
+  background: var(--permukaan);
+  border: 2px dashed var(--garis-tegas);
+  border-radius: 10px;
+}
+
+.pita {
+  padding: 0.5rem 1.25rem;
+  background: var(--pisang);
+  color: var(--ink);
+  font-family: var(--font-judul);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.label-isi {
+  padding: 1.25rem;
+}
+
+.penerima {
+  margin: 0;
+  font-family: var(--font-judul);
+  font-size: 1.375rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.alamat,
+.telp {
+  margin: 0.5rem 0 0;
+  overflow-wrap: anywhere;
+}
+
+.ajakan {
+  margin: 0.5rem 0 0;
+  color: var(--redam);
+}
+
+.ajakan a {
+  color: var(--taro);
+  font-weight: 600;
+}
+
+.kosong {
+  color: var(--redam);
+}
+
+.akun h2 {
+  margin: 0 0 0.25rem;
+  font-family: var(--font-judul);
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.akun dl {
+  margin: 0;
+}
+
+.baris {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1rem;
+  padding: 0.875rem 0;
+  border-bottom: 1px solid var(--garis);
+}
+
+.baris dt {
+  color: var(--redam);
+  font-weight: 500;
+}
+
+.baris dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+
+.tombol {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  border: 2px solid var(--taro);
+  border-radius: 8px;
+  background: var(--taro);
+  color: #fff;
+  font: inherit;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tombol:hover {
+  background: var(--taro-tua);
+  border-color: var(--taro-tua);
+}
+
+.tombol-batal {
+  background: transparent;
+  color: var(--taro);
+}
+
+.tombol-batal:hover {
+  background: var(--permukaan);
+  color: var(--taro-tua);
+}
+
+.aksi-identitas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.625rem;
+}
+
+.tombol-admin {
+  background: var(--pisang);
+  border-color: var(--pisang);
+  color: var(--ink);
+}
+
+.tombol-admin:hover {
+  background: #8cc9df;
+  border-color: #8cc9df;
+}
+
+.aksi {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.field {
+  margin-bottom: 1.125rem;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 0.375rem;
+  font-weight: 600;
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.625rem 0.75rem;
+  border: 1px solid var(--garis-tegas);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--ink);
+  font: inherit;
+}
+
+.field textarea {
+  min-height: 6.5rem;
+  resize: vertical;
+}
+
+.field small {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--redam);
+  font-size: 0.875rem;
+}
+
+.form-edit .label-isi {
+  padding-bottom: 0.25rem;
+}
+
+.form-edit .akun {
+  margin-bottom: 0;
+}
+
+.form-edit .akun h2 {
+  margin-bottom: 1rem;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid var(--taro);
+  outline-offset: 2px;
+}
+
+@media (max-width: 30rem) {
+  .nama-blok h1 {
+    font-size: 1.625rem;
+  }
+
+  .identitas .tombol,
+  .aksi .tombol {
+    flex: 1 1 100%;
+  }
+
+  .baris {
+    grid-template-columns: 1fr;
+    gap: 0.125rem;
+  }
+}
